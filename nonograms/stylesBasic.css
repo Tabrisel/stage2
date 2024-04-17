@@ -1,0 +1,434 @@
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  padding: 0; 
+  box-sizing: border-box;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+body {
+  font-family: 'EB Garamond', serif;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: rgb(240, 245, 213);
+  transition: background-color 0.5s ease;
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.settings {
+  display: flex;
+  right: 0;
+  z-index: 99;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 70px;
+}
+
+.titleAndTimer {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.title-timer{
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 30px;
+  align-items:flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.timer {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.wrapperGame {
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  position: relative;
+}
+
+.wrapperTitleTimer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  position: fixed; 
+  top: 0;
+  z-index: 100;
+}
+
+.topPart {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.bottomPart {
+  display: flex;
+  flex-direction: row;
+}
+
+.empty {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: beige;
+}
+
+.tipsX {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.rows {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.item {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #000;
+  flex-shrink: 1;
+  font-weight: bold;
+  font-size: 20px;
+  position: relative;
+}
+
+.item__cross::before,
+.item__cross::after {
+  content: '';
+  width: 3px;
+  position: absolute;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.item__cross::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.item__cross::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.tipsY {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  z-index: 3;
+}
+
+.fieldGame {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.questionMusic,
+.questionSound {
+  box-sizing: border-box;
+  font-weight: bold;
+  width: 100%; 
+  padding: 10px;
+  padding-right: 0px;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.radioLabel {
+  text-align: center;
+  font-weight: bold;
+}
+ .custom-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-input+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.custom-input+label::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.custom-input:not(:disabled):not(:checked)+label:hover::before {
+  border-color: rgb(255, 255, 255);
+  cursor: pointer;
+  scale: 1.1;
+  transition: scale 0.3s ease-in-out;
+}
+
+.custom-input:not(:checked)+label:hover {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  scale: 1.1;
+  transition: scale 0.3s ease-in-out;
+}
+
+.custom-input:checked+label::before {
+  background-image: url("assets/mark.svg");
+  background-size: 100% 100%; 
+}
+
+.custom-input:not(:disabled):active+label::before {
+  cursor: pointer;
+}
+
+
+.buttonGame {
+  border-radius: 3px;
+  border: none;
+  padding: 10px;
+  align-self: flex-end;
+  font-weight: bold;
+  width: 100%;
+  font-size: 20px;
+}
+
+.buttonGame:hover {
+  cursor: pointer;
+}
+
+.buttonGame:disabled:hover {
+  pointer-events: none;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25%, 75% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+}
+
+.canOnlyReset {
+  animation: shake 1s infinite;
+}
+
+.chooseBlock {
+  padding: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.easyForm, .mediumForm, .hardForm, .sizeForm {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.label, .sizeLabel{
+  border-radius: 1px;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 3px;
+}
+.select, .option, .sizeSelect, .sizeOption {
+  font-weight: bold;
+  border: 1px solid;
+  font-size: 15px;
+}
+
+.select:hover {
+  cursor: pointer;
+}
+
+.sizeSelect:hover {
+  cursor: pointer;
+}
+
+.select, .sizeSelect {
+  position: relative;
+  width: 150px;
+  height: 30px;
+  border-radius: 2px;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-out;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 10px;
+  border: none;
+}
+
+.select {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 150px;
+}
+
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.border-right {
+  border-right: 1px solid #000;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #000;
+}
+
+.changeTheme {
+  margin-right: 0px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1300px) {
+  .item {
+    width: 30px;
+    height: 30px;
+  };
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    flex-direction: column;
+  }
+
+  .titleAndTimer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .questionMusic,
+  .questionSound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrapperGame {
+    position: static;
+    margin: 0 auto 10px;
+    order: 1;
+    transform: none;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    min-height: 300px;
+  }
+
+  .settings {
+    margin-top: 0px;
+    position: static;
+    order: 2;
+    flex-direction: column-reverse;
+    align-items:normal;
+    border: 3px solid rgb(0, 62, 0);;
+    min-height: 100vh;
+  }
+  .buttonGame {
+    min-height: 70px;
+    flex-grow: 1;
+  }
+
+  .chooseBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .item {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .item {
+    width: 25px;
+    height: 25px;
+  };
+}
+
+@media screen and (max-width: 600px) {
+  .item {
+    width: 20px;
+    height: 20px;
+  };
+}
+
+
+

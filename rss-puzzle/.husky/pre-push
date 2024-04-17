@@ -1,0 +1,8 @@
+# Переходим в директорию rss-puzzle
+cd rss-puzzle
+
+# Запускаем lint-staged
+npx lint-staged
+
+# Вызываем validate-branch-name для проверки имени ветки
+npx validate-branch-name -r '(init|feat|fix|refactor|chore|docs|build|style|test|Rss-Pz-\d+_)?[a-z]+' && npm run lint

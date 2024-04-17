@@ -1,0 +1,337 @@
+
+h1 {
+  color: rgb(195, 197, 195);
+}
+
+body {
+  background-image: url(assets/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.timer {
+  color: rgb(206, 218, 206);
+}
+
+.empty {
+  background-color: transparent;
+}
+
+.item {
+  border: 1px solid rgba(79, 134, 31, 0.605);
+  color: rgb(79, 144, 79);
+}
+
+.fieldGame .item:hover {
+  cursor: pointer;
+}
+
+.item__sp {
+  background-color: rgb(3, 34, 20);
+}
+
+.item__cross {
+  background-color: rgb(211, 207, 175);
+}
+
+.item__cross::before,
+.item__cross::after {
+  background-color: rgb(113, 127, 35);
+}
+
+.fieldGame {
+  border-top: 1px solid rgba(175, 98, 21, 0.797);
+  border-left: 1px solid rgba(175, 98, 21, 0.797);
+  border-bottom: 1px solid rgba(175, 98, 21, 0.797);
+  background-color: beige;
+}
+
+.buttonGame {
+  background-color: rgb(204, 176, 142);
+  border: 1px solid rgb(17, 76, 17);
+  border-radius: 0px;
+}
+
+.buttonGame:hover {
+  background-color: #695c5c;
+  color: white;
+}
+
+.buttonGame:disabled {
+  background-color: rgb(162, 166, 161);
+}
+
+.buttonGame:disabled {
+  background-color: rgb(150, 150, 150);
+  color: black;
+}
+
+.chooseBlock {
+  background-color:#535e4e;
+}
+
+.label, .sizeLabel{
+  color: rgb(255, 255, 255);
+}
+
+.select, .option, .sizeSelect, .sizeOption {
+  color: rgb(110, 88, 37);
+  border-color: rgba(175, 90, 21, 0.797);
+  background-color: rgba(247, 227, 227, 0.621);
+}
+
+.select, .sizeSelect {
+  background: #ffffff;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+
+.custom-input:checked+label {
+  color: rgb(88, 56, 17);
+}
+
+.custom-input:not(:disabled):active+label::before {
+  border-color: rgb(144, 119, 79);
+}
+
+.custom-input+label::before {
+  border: 1px solid rgb(144, 104, 79);
+}
+
+.border-right {
+  border-right: 2px solid #000;
+}
+
+.border-bottom {
+  border-bottom: 2px solid #000;
+}
+
+
+.tipsY .rows:nth-child(5n) .item {
+  border-bottom: 2px solid #000; 
+}
+
+
+.tipsX .rows .item:nth-child(5n) {
+  border-right: 2px solid #000; 
+}
+
+.fieldGame {
+  border: 2px solid #000;
+  z-index: 5;
+}
+
+.tipsX {
+  border-right: 2px solid #000;
+  border-left: 2px solid #000;
+  border-top: 2px solid #000;
+}
+
+.tipsY {
+  border-bottom: 2px solid #000;
+  border-left: 2px solid #000;
+  border-top: 2px solid #000;
+}
+
+.questionMusic,
+.questionSound {
+  background-color:#c0b684;
+  color: rgb(88, 56, 17);
+}
+
+.radioLabel {
+  color: rgb(88, 56, 17);
+}
+
+.wrapperTitleTimer {
+  background-color:#695c5c
+}
+
+/* score table */ 
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.823);
+  justify-content: center;
+  align-items: center;
+  z-index: 150;
+  min-height: 100vh;
+}
+
+
+.records-container {
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 30px;
+  align-items: center;
+  flex-direction: column;
+  width: 800px;
+  height: 550px;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-color: #ddd8bd;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 4px #c7b777;
+}
+
+th {
+  width: 200px;
+}
+
+
+  #recordsTable {
+    width: 700px;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.title-table {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+#recordsTable th, #recordsTable td {
+    font-family: 'Playfair Display', serif;
+    border: 1px solid #2e1010;
+    padding: 8px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#recordsTable th {
+  font-family: 'Playfair Display', serif;
+  background-color: #7bd487;
+}
+
+.bottomContainer {
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#closeButton {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+  width: 200px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #7bd487;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  bottom: 10px;
+}
+
+#closeButton:hover {
+  background-color: #489753;
+}
+
+@media screen and (max-width: 900px) {
+  .records-container {
+    box-sizing: border-box;
+    width: 460px;
+  }
+
+  #recordsTable {
+    width: 400px;
+  }
+}
+
+  /* win-modal window */ 
+.overlayModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.823);
+  justify-content: center;
+  align-items: center;
+  z-index: 150;
+  min-height: 100vh;
+}
+
+
+.win-container {
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  align-items: center;
+  flex-direction: column;
+  width: 700px;
+  height: 200px;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-color: #ddd8bd;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 4px #c7b777;
+}
+
+.text-win {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.bottomContainerWin {
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#okButton {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+  width: 200px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #7bd487;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  bottom: 10px;
+}
+
+#okButton:hover {
+  background-color: #489753;
+}
+
+@media screen and (max-width: 900px) {
+
+  .win-container {
+    box-sizing: border-box;
+    width: 460px;
+  }
+
+}

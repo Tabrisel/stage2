@@ -1,0 +1,20 @@
+.inputFields {
+    position: relative;
+    width: 170px;
+    border: none;
+    height: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px rgb(16, 178, 164) solid;
+    box-shadow: 0 3px 5px 0px white;
+}
+
+.label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.inputFields.noValid {
+    color: rgb(178, 54, 16);
+    border: 2px rgb(178, 54, 16) solid;
+}

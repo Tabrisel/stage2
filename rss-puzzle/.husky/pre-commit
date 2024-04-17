@@ -1,0 +1,5 @@
+# Переходим в директорию rss-puzzle
+cd rss-puzzle
+
+# Запускаем lint-staged
+npx lint-staged

@@ -1,0 +1,375 @@
+h1 {
+  color: rgb(219, 215, 153);
+}
+
+.timer {
+  color: rgb(219, 215, 153);
+}
+
+body {
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(75, 43, 90));
+}
+
+.empty {
+  background-color: transparent;
+}
+
+.item {
+  border: 1px solid rgb(0, 0, 0); 
+  color: rgb(219, 215, 153); 
+}
+
+.item__sp {
+  background-color: #0f0120;
+}
+
+.item__cross {
+  background-color: rgb(88, 64, 104);
+}
+
+.item__cross::before,
+.item__cross::after {
+  background-color: #7c7288;
+}
+
+.fieldGame {
+  background-color: #494949;
+}
+
+.buttonGame {
+  background-color: rgb(136, 123, 95);
+  border: 1px solid rgb(88, 64, 104);
+}
+
+.buttonGame:hover {
+  background-color:  #494949;
+  color: rgb(219, 215, 153);
+}
+
+.buttonGame:disabled {
+  background-color: rgb(162, 166, 161);
+  color: #494949;
+}
+
+.fieldGame .item:hover {
+  cursor: pointer;
+}
+
+.label, .sizeLabel{
+  color: rgb(185, 176, 73);
+}
+
+.select, .easyOption, .sizeSelect, .sizeOption {
+  color: #2b2137;
+  border-color: rgb(185, 127, 73);
+  background-color: #dfd498;
+}
+
+.select, .sizeSelect {
+  background: #dfd498;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+
+.border-right {
+  border-right: 2px solid #180219;
+}
+
+.border-bottom {
+  border-bottom: 2px solid #180219;
+}
+
+.tipsY .rows:nth-child(5n) .item {
+  border-bottom: 2px solid #180219;
+}
+
+
+.tipsX .rows .item:nth-child(5n) {
+  border-right: 2px solid #180219;
+}
+
+.chooseBlock {
+  background-color: #3b304a; 
+}
+
+.questionMusic, .questionSound {
+  background-color: #3b304a; 
+  color: rgb(185, 176, 73);
+}
+
+.radioLabel {
+  color:rgb(185, 176, 73);
+  text-align: center;
+  font-weight: bold;
+}
+ .custom-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-input+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.custom-input+label::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid rgb(185, 127, 73);
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.custom-input:not(:disabled):not(:checked)+label:hover::before {
+  border-color: rgb(255, 255, 255);
+  cursor: pointer;
+  scale: 1.1;
+  transition: scale 0.3s ease-in-out;
+}
+
+.custom-input:not(:checked)+label:hover {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  scale: 1.1;
+  transition: scale 0.3s ease-in-out;
+}
+
+.custom-input:checked+label::before {
+  background-image: url("assets/mark.svg");
+  background-size: 100% 100%; 
+}
+
+.custom-input:checked+label {
+  color: rgb(185, 176, 73);
+}
+
+.custom-input:not(:disabled):active+label::before {
+  border-color: rgb(79, 144, 79);
+  cursor: pointer;
+}
+
+.fieldGame {
+  border: 2px solid #180219;
+  z-index: 5;
+}
+
+.tipsX {
+  border-right: 2px solid #180219;
+  border-left: 2px solid #180219;
+  border-top: 2px solid #180219;
+}
+
+.tipsY {
+  border-bottom: 2px solid #180219;
+  border-left: 2px solid #180219;
+  border-top: 2px solid #180219;
+}
+
+.wrapperTitleTimer {
+  background-color:#210936
+}
+
+/* score table */ 
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.823);
+  justify-content: center;
+  align-items: center;
+  z-index: 150;
+  min-height: 100vh;
+}
+
+
+.records-container {
+  color: rgb(151, 151, 43);
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 30px;
+  align-items: center;
+  flex-direction: column;
+  width: 800px;
+  height: 550px;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-color: #221628;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 4px #c7b777;
+}
+
+th {
+  width: 200px;
+}
+
+
+  #recordsTable {
+    width: 700px;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.title-table {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+#recordsTable th, #recordsTable td {
+    font-family: 'Playfair Display', serif;
+    border: 1px solid #6f5e7b;
+    padding: 8px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#recordsTable th {
+  font-family: 'Playfair Display', serif;
+  background-color: #302339;
+}
+
+.bottomContainer {
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#closeButton {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+  width: 200px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #302339;
+  color: rgb(151, 151, 43);
+  border: none;
+  border-radius: 5px;
+  bottom: 10px;
+}
+
+#closeButton:hover {
+  background-color: #3f2d4c;
+  color: rgb(216, 216, 27);
+}
+
+@media screen and (max-width: 900px) {
+  .records-container {
+    box-sizing: border-box;
+    width: 460px;
+  }
+
+  .settings {
+    border: 3px solid black;
+  }
+
+  #recordsTable {
+    width: 400px;
+  }
+}
+
+ /* win-modal window */ 
+ .overlayModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.823);
+  justify-content: center;
+  align-items: center;
+  z-index: 150;
+  min-height: 100vh;
+}
+
+
+.win-container {
+  border-radius: 30px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  align-items: center;
+  flex-direction: column;
+  width: 700px;
+  height: 200px;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-color: #221628;
+  color: rgb(151, 151, 43);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 4px #c7b777;
+}
+
+.text-win {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.bottomContainerWin {
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#okButton {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+  width: 200px;
+  cursor: pointer;
+  padding: 10px;
+  background-color:  #302339;
+  color: rgb(151, 151, 43);
+  border: none;
+  border-radius: 5px;
+  bottom: 10px;
+}
+
+#okButton:hover {
+  background-color:  #463850;
+  color: rgb(218, 218, 41);
+}
+
+@media screen and (max-width: 900px) {
+
+  .win-container {
+    box-sizing: border-box;
+    width: 460px;
+  }
+
+}

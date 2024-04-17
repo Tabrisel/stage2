@@ -1,0 +1,53 @@
+.wrapperLoginPage {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapperLoginPage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/png/login.png');
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.wrapperUserPage {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url('../assets/png/login.png');
+    background-size: cover;
+    z-index: -1;
+}
+
+.wrapperGamePage {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    overflow: hidden;
+    background-image: url('../assets/png/game.png');
+    background-size: cover;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}

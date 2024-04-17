@@ -1,0 +1,5 @@
+# Переходим в директорию rss-puzzle
+cd rss-puzzle
+
+# Запускаем commitlint:
+npx --no -- commitlint --edit $1

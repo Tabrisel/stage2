@@ -1,0 +1,186 @@
+.button {
+    background-color: rgb(33, 177, 141);
+    width: 170px;
+    border: none;
+    font-size: 20px;
+    color: rgb(209, 214, 111);
+    font-weight: bold;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.button:not(:disabled):hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.button:disabled {
+    background-color: rgb(109, 143, 134);
+    color: rgb(188, 189, 150);
+}
+
+.button-exit,
+.checkButton,
+.continueButton,
+.autoButton {
+    border: 1px solid #122d25;
+    background-color: rgb(182, 211, 137);
+    color: rgb(9, 107, 83);
+    border-radius: 10px;
+    width: 110px;
+    height: 32px;
+    margin-right: 20px;
+    font-weight: bold;
+    font-family: 'Madimi One', sans-serif;
+    font-size: 20px;
+    transition: all 0.3s ease-out;
+    background: linear-gradient(to bottom, rgb(157, 178, 61), #79d9bc);
+}
+
+.gameButtons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.checkButton,
+.continueButton {
+    z-index: 2;
+    border-radius: 2px;
+    animation: all 0.5s ease-in-out;
+}
+
+.autoButton {
+    border-radius: 2px;
+    font-size: 15px;
+    text-wrap: nowrap;
+}
+
+.continueButton {
+    position: absolute;
+    margin-left: -129px;
+    opacity: 0;
+    z-index: -2;
+}
+
+.checkButton {
+    opacity: 1;
+}
+
+.hideButton {
+    opacity: 0;
+    z-index: -2;
+}
+
+.shake {
+    animation: shake 1s infinite;
+}
+
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+.checkButton:not(:disabled):hover {
+    cursor: pointer;
+    box-shadow:
+        inset 0 0 1em 0 #d4ff88,
+        0 0 1em 0 #e3ff90;
+}
+
+.autoButton:not(:disabled):hover {
+    cursor: pointer;
+    box-shadow:
+        inset 0 0 1em 0 #d4ff88,
+        0 0 1em 0 #e3ff90;
+}
+
+.checkButton:disabled {
+    background: rgb(109, 143, 134);
+    color: rgb(188, 189, 150);
+    animation: none;
+}
+
+.autoButton:disabled {
+    background: rgb(109, 143, 134);
+    color: rgb(188, 189, 150);
+    animation: none;
+}
+
+.continueButton:not(:disabled):hover {
+    cursor: pointer;
+    box-shadow:
+        inset 0 0 1em 0 #d4ff88,
+        0 0 1em 0 #e3ff90;
+}
+
+.continueButton:disabled {
+    background: rgb(109, 143, 134);
+    color: rgb(188, 189, 150);
+    animation: none;
+}
+
+.button-exit:hover {
+    cursor: pointer;
+    background: linear-gradient(to bottom, rgb(203, 217, 143), #aef0dc);
+}
+
+.start-button {
+    border: none;
+    height: 40px;
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    color: rgb(255, 255, 209);
+    font-weight: bold;
+    width: 250px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, rgb(22, 104, 92), #72978c);
+    box-shadow:
+        inset 0 0 0.5em 0 #fcffc2,
+        0 0 0.5em 0 #d3e3a2;
+    transition: all 0.3s ease-out;
+}
+
+.start-button:hover {
+    box-shadow:
+        inset 0 0 1em 0 #d4ff88,
+        0 0 1em 0 #e3ff90;
+    cursor: pointer;
+    transform: scale(1.05);
+    border-radius: 10px;
+}
+
+.hintButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconTranslate {
+    width: 40px;
+    height: 40px;
+    background-image: url('../assets/png/translate.png');
+    background-size: cover;
+}
+
+.iconSound {
+    width: 30px;
+    height: 30px;
+    background-image: url('../assets/png/sound.png');
+    background-size: cover;
+}
+
+.iconSound:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.iconTranslate:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.notActive {
+    filter: grayscale(1);
+}
